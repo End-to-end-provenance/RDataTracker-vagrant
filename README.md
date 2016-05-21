@@ -8,7 +8,7 @@ In order to run the vagrant image you first need to install the following three 
 [Git](https://git-scm.com/book/en/v1/Getting-Started-Installing-Git)
 [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 [Vagrant](https://www.vagrantup.com/downloads.html).
-Choose and download the version that correspond to your OS and architecture (e.g. Windows x64).
+Download the version corresponding to your OS and architecture (e.g. Windows x64).
 
 ## Running the image
 
