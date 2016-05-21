@@ -21,6 +21,12 @@ vagrant up
 A guest virtual machine (VM) should be starting up.
 It may take a while (depending on your connection speed, and the host performance) before the virtual machine is ready, wait for the script in the host terminal to finish before using the guest VM.
 
+## Guest VM info
+Username: vagrant
+Password: vagrant
+
+Ubuntu 14.04
+
 ## Shared Folder
 
 File can be shared between the host and the guest by placing them in the "shared" folder on the host and/or in "/shared" on the guest VM.
