@@ -15,6 +15,7 @@ Download the version corresponding to your OS and architecture (e.g. Windows x64
 To run the image simply type in the terminal:
 ``` shell
 git clone https://github.com/End-to-end-provenance/RDataTracker-vagrant.git
+cd RDataTracker-vagrant
 vagrant up
 ```
 
