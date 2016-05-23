@@ -37,7 +37,7 @@ Vagrant.configure(2) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "./shared", "/shared_data"
+  config.vm.synced_folder "./shared", "/shared"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -70,7 +70,13 @@ Vagrant.configure(2) do |config|
 	gpg -a --export E084DAB9 | sudo apt-key add -
 	sudo apt-get update
 	sudo apt-get -y install r-base
+	sudo apt-get -y install git
+	sudo apt-get install openjdk-7-jdk
+	sudo apt-get install openjdk-7-jre
+	sudo apt-get -y install ant
 	sudo apt-get -y install libcurl4-gnutls-dev libxml2-dev libssl-dev
-	sudo /shared_data/install.sh
+	sudo /shared/install.sh
+	mkdir -p /home/vagrant/ddg
+	cp --force /shared/ddg.jar /home/vagrant/ddg/ddg.jar
   SHELL
 end
