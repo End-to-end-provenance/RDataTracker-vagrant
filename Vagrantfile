@@ -69,13 +69,15 @@ Vagrant.configure(2) do |config|
 	gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
 	gpg -a --export E084DAB9 | sudo apt-key add -
 	sudo apt-get update
-	sudo apt-get -y install r-base
+	sudo apt-get -y install r-base r-base-dev
 	sudo apt-get -y install git
 	sudo apt-get install openjdk-7-jdk
 	sudo apt-get install openjdk-7-jre
 	sudo apt-get -y install ant
 	sudo apt-get -y install libcurl4-gnutls-dev libxml2-dev libssl-dev
+	sudo apt-get -y install libjpeg62
 	sudo /shared/install.sh
+	sudo dpkg -i /shared/rstudio-0.99.902-amd64.deb
 	mkdir -p /home/vagrant/ddg
 	cp --force /shared/ddg.jar /home/vagrant/ddg/ddg.jar
   SHELL
