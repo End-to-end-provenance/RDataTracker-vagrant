@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "box-cutter/ubuntu1404-desktop"
+  config.vm.box = "boxcutter/ubuntu1404-desktop"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -64,21 +64,24 @@ Vagrant.configure(2) do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
-	sudo apt-get update
 	sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list'
 	gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
 	gpg -a --export E084DAB9 | sudo apt-key add -
-	sudo apt-get update
+	sudo apt-get -y update
+	sudo apt-get -y dist-upgrade
 	sudo apt-get -y install r-base r-base-dev
 	sudo apt-get -y install git
-	sudo apt-get install openjdk-7-jdk
-	sudo apt-get install openjdk-7-jre
+	sudo apt-get -y install openjdk-7-jdk openjdk-7-jre openjdk-7-jre-lib
 	sudo apt-get -y install ant
 	sudo apt-get -y install libcurl4-gnutls-dev libxml2-dev libssl-dev
 	sudo apt-get -y install libjpeg62
-	sudo /shared/install.sh
 	sudo dpkg -i /shared/rstudio-0.99.902-amd64.deb
-	mkdir -p /home/vagrant/ddg
-	cp --force /shared/ddg.jar /home/vagrant/ddg/ddg.jar
+	echo "Installing RDataTracker..."
+	/shared/install.sh
+	echo "Installing DDG..."
+	cd /home/vagrant/ && git clone https://github.com/End-to-end-provenance/DDG-Explorer.git
+	cp --force /shared/build.xml /home/vagrant/DDG-Explorer/build.xml
+	cd /home/vagrant/DDG-Explorer && ant build-project
+	cd /home/vagrant/DDG-Explorer && ant ddg-explorer
   SHELL
 end
