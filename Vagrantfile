@@ -76,7 +76,6 @@ Vagrant.configure(2) do |config|
 	sudo apt-get -y -f install r-base-dev
 	sudo apt-get -y -f install git
 	sudo apt-get -y -f install openjdk-8-jre
-	sudo apt-get -y -f install openjdk-8-jre-lib
 	sudo apt-get -y -f install openjdk-8-jdk
 	sudo apt-get -y -f install ant
 	sudo apt-get -y -f install libcurl4-gnutls-dev
