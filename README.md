@@ -26,6 +26,8 @@ It may take a while (depending on your connection speed, and the host performanc
 Username: vagrant
 Password: vagrant
 
+WARNING: US keyboard
+
 Ubuntu 14.04
 
 ## Shared Folder

@@ -88,7 +88,7 @@ Vagrant.configure(2) do |config|
 	localectl set-locale LANG="en_US.UTF-8"
 	sudo locale-gen
 	echo "Installing RDataTracker..."
-	/shared/install.sh
+	sudo /shared/install.sh
 	echo "Installing DDG..."
 	cd /home/vagrant/ && git clone https://github.com/End-to-end-provenance/DDG-Explorer.git
 	cd /home/vagrant/DDG-Explorer && ant build-project
