@@ -67,8 +67,8 @@ Vagrant.configure(2) do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
 	sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list'
-	gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
-	gpg -a --export E084DAB9 | sudo apt-key add -
+	sudo gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
+	sudo gpg -a --export E084DAB9 | sudo apt-key add -
 	sudo apt-get -y update
 	sudo apt-get -y dist-upgrade
 	sudo apt-get -y -f install
@@ -82,6 +82,7 @@ Vagrant.configure(2) do |config|
 	sudo apt-get -y -f install libxml2-dev
 	sudo apt-get -y -f install libssl-dev
 	sudo apt-get -y -f install libjpeg62
+	sudo apt-get -y -f install libgstreamer0.10-0
 	sudo dpkg -i /shared/rstudio-0.99.902-amd64.deb
 	sudo apt-get -y -f install
 	localectl set-locale LANG="en_US.UTF-8"
