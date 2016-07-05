@@ -10,6 +10,13 @@ In order to run the vagrant image you first need to install the following three 
 [Vagrant](https://www.vagrantup.com/downloads.html).
 Download the version corresponding to your OS and architecture (e.g. Windows x64).
 
+On Ubuntu simply:
+``` shell
+sudo apt-get install virtualbox
+sudo apt-get install vagrant
+```
+
+
 ## Running the image
 
 To run the image simply type in the terminal:

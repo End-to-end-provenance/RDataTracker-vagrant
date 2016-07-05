@@ -83,11 +83,13 @@ Vagrant.configure(2) do |config|
 	sudo apt-get -y -f install libssl-dev
 	sudo apt-get -y -f install libjpeg62
 	sudo apt-get -y -f install libgstreamer0.10-0
+	sudo apt-get -y -f install libgstreamer-plugins-base0.10-0
 	sudo dpkg -i /shared/rstudio-0.99.902-amd64.deb
 	sudo apt-get -y -f install
 	localectl set-locale LANG="en_US.UTF-8"
 	sudo locale-gen
 	echo "Installing RDataTracker..."
+	sudo chmod +x /shared/install.sh
 	sudo /shared/install.sh
 	echo "Installing DDG..."
 	cd /home/vagrant/ && git clone https://github.com/End-to-end-provenance/DDG-Explorer.git
