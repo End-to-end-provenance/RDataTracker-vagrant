@@ -103,6 +103,9 @@ Vagrant.configure(2) do |config|
 	cd /home/vagrant/ && git clone https://github.com/End-to-end-provenance/DDG-Explorer.git
 	cd /home/vagrant/DDG-Explorer && ant build-project
 	cd /home/vagrant/DDG-Explorer && ant ddg-explorer
+	echo "Preparing desktop..."
+	ln -s /home/vagrant/DDG-Explorer/ddg-explorer_2.06.jar /home/vagrant/Desktop/DDG-explorer.jar
+	ln -s /usr/lib/rstudio/bin/rstudio /home/vagrant/Desktop/RStudio
   SHELL
   
   config.vm.provision :unix_reboot
