@@ -84,6 +84,8 @@ Vagrant.configure(2) do |config|
 	sudo apt-get -y -f install libjpeg62
 	sudo apt-get -y -f install libgstreamer0.10-0
 	sudo apt-get -y -f install libgstreamer-plugins-base0.10-0
+	sudo apt-get install make
+	sudo apt-get -y -f install texlive
 	sudo dpkg -i /shared/rstudio-0.99.902-amd64.deb
 	sudo apt-get -y -f install
 	localectl set-locale LANG="en_US.UTF-8"
