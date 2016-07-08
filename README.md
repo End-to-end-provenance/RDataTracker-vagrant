@@ -35,8 +35,8 @@ Password: vagrant
 
 WARNING: US keyboard
 
-Ubuntu 14.04
+Ubuntu 16.04
 
 ## Shared Folder
 
-File can be shared between the host and the guest by placing them in the "shared" folder on the host and/or in "/shared" on the guest VM.
+Files can be shared between the host and the guest by placing them in the "shared" folder on the host and/or in "/shared" on the guest VM.
