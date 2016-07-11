@@ -9,4 +9,5 @@ sudo su - -c "R -e \"install.packages('lme4', repos='http://cran.rstudio.com/', 
 sudo su - -c "R -e \"install.packages('BMA', repos='http://cran.rstudio.com/', dependencies = TRUE)\""
 sudo su - -c "R -e \"install.packages('gridExtra', repos='http://cran.rstudio.com/', dependencies = TRUE)\""
 sudo su - -c "R -e \"install.packages('tidyr', repos='http://cran.rstudio.com/', dependencies = TRUE)\""
+sudo su - -c "R -e \"install.packages('chron', repos='http://cran.rstudio.com/', dependencies = TRUE)\""
 sudo su - -c "R -e \"devtools::install_github('End-to-end-provenance/RDataTracker')\""
