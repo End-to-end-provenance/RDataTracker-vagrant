@@ -21,7 +21,7 @@ sudo apt-get install vagrant
 
 To run the image simply type in the terminal:
 ``` shell
-git clone https://github.com/End-to-end-provenance/RDataTracker-vagrant.git
+git clone https://github.com/End-to-end-provenance/eeProv-vagrant.git
 cd RDataTracker-vagrant
 vagrant up
 ```
