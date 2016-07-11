@@ -92,6 +92,7 @@ Vagrant.configure(2) do |config|
 	sudo apt-get -y -f install libgstreamer-plugins-base0.10-0
 	sudo apt-get -y -f install make
 	sudo apt-get -y -f install texlive
+	sudo apt-get -y -f install libhunspell-dev
 	sudo dpkg -i /shared/rstudio-0.99.902-amd64.deb
 	sudo apt-get -y -f install
 	localectl set-locale LANG="en_US.UTF-8"
@@ -104,7 +105,7 @@ Vagrant.configure(2) do |config|
 	cd /home/vagrant/DDG-Explorer && ant build-project
 	cd /home/vagrant/DDG-Explorer && ant ddg-explorer
 	echo "Preparing desktop..."
-	ln -s /home/vagrant/DDG-Explorer/ddg-explorer_2.06.jar /home/vagrant/Desktop/DDG-explorer.jar
+	ln -s /home/vagrant/DDG-Explorer/ddg-explorer_2.7.0.jar /home/vagrant/Desktop/DDG-explorer.jar
 	ln -s /usr/lib/rstudio/bin/rstudio /home/vagrant/Desktop/RStudio
   SHELL
   

@@ -1,6 +1,6 @@
 # RDataTracker-vagrant
 
-Vagrant script to setup Ubuntu image for RDataTracker demo
+Vagrant script to provision an Ubuntu image to run RDataTracker demo
 
 ## Installation
 
