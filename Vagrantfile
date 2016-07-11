@@ -93,6 +93,7 @@ Vagrant.configure(2) do |config|
 	sudo apt-get -y -f install make
 	sudo apt-get -y -f install texlive
 	sudo apt-get -y -f install libhunspell-dev
+	sudo apt-get -y -f libcairo2-dev
 	sudo dpkg -i /shared/rstudio-0.99.902-amd64.deb
 	sudo apt-get -y -f install
 	localectl set-locale LANG="en_US.UTF-8"
