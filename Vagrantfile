@@ -108,6 +108,8 @@ Vagrant.configure(2) do |config|
 	echo "Preparing desktop..."
 	ln -s /home/vagrant/DDG-Explorer/ddg-explorer_2.7.0.jar /home/vagrant/Desktop/DDG-explorer.jar
 	ln -s /usr/lib/rstudio/bin/rstudio /home/vagrant/Desktop/RStudio
+	mkdir /home/vagrant/Desktop/tutorial
+	cp -a /shared/tutorial/. /home/vagrant/Desktop/tutorial/
   SHELL
   
   config.vm.provision :unix_reboot
