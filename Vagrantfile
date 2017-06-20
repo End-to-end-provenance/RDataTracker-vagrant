@@ -74,8 +74,13 @@ Vagrant.configure(2) do |config|
     sudo dnf -y -v install R
     sudo dnf -y -v install /shared/rstudio-1.0.143-x86_64.rpm
     sudo dnf -y -v install openssl-devel libxml2-devel
-    sudo dnf -y install libcurl libcurl-devel
-    sudo dnf -y install perl-CPAN
+    sudo dnf -y -v install libcurl libcurl-devel
+    sudo dnf -y -v install perl-CPAN
+    sudo dnf -y -v install ruby
+    wget https://atom.io/download/rpm
+    mv ./rpm ./atom.rpm
+    sudo dnf -y install ./atom.rpm
+    rm -rf ./atom.rpm
     sudo chmod +x /shared/install.sh
     sudo /shared/install.sh
   SHELL
