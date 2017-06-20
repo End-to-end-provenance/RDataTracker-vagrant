@@ -75,7 +75,7 @@ Vagrant.configure(2) do |config|
     sudo dnf -y -v install /shared/rstudio-1.0.143-x86_64.rpm
     sudo dnf -y -v install openssl-devel libxml2-devel
     sudo dnf -y install libcurl libcurl-devel
-    sudo dnf -y perl-CPAN
+    sudo dnf -y install perl-CPAN
     sudo chmod +x /shared/install.sh
     sudo /shared/install.sh
   SHELL
