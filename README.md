@@ -33,9 +33,9 @@ It may take a while (depending on your connection speed, and the host performanc
 Username: vagrant
 Password: vagrant
 
-WARNING: US keyboard
+WARNING: UK keyboard by default, prompted for changes on first boot
 
-Ubuntu 16.04
+Fedora 25
 
 ## Shared Folder
 
